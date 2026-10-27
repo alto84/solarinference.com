@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Link preview card</title>
+<!-- Source for og.png (1200x630). Regenerate with headless Chrome:
+     chrome --headless=new --hide-scrollbars --window-size=1200,630 --virtual-time-budget=8000 --screenshot=og.png og-card.html
+     then save as og.jpg (quality 90, progressive) to keep it under 300 KB for WhatsApp -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;1,500&family=Alegreya+SC:wght@500&family=Hanken+Grotesk:wght@500;600&display=block">
+<style>
+html,body{margin:0;width:1200px;height:630px;overflow:hidden}
+body{background:linear-gradient(135deg,#24452F 0%,#1E3A2B 50%,#13251B 100%);color:#F4EEE3;font-family:"Hanken Grotesk","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;position:relative}
+.frame{position:absolute;inset:22px;border:1px solid rgba(194,161,77,.45)}
+.copy{position:absolute;left:76px;top:62px;bottom:58px;width:560px;display:flex;flex-direction:column}
+.brand{display:flex;align-items:center;gap:16px;font-family:"Alegreya SC",Georgia,serif;font-weight:500;font-size:32px;letter-spacing:.02em}
+.brand svg{width:54px;height:54px}
+h1{font-family:Alegreya,Georgia,serif;font-weight:500;font-size:76px;line-height:1.02;letter-spacing:-.01em;margin:46px 0 0}
+h1 em{font-style:italic;color:#E6C76B}
+.lead{font-size:26px;line-height:1.4;color:#CFC3AF;margin:26px 0 0;max-width:30ch}
+.url{margin-top:auto;font-weight:600;font-size:22px;letter-spacing:.14em;text-transform:uppercase;color:#C2A14D}
+.scene{position:absolute;right:46px;bottom:40px;width:540px;height:auto}
+.scene text{font-family:"Hanken Grotesk",sans-serif;font-size:14px;fill:#CFC3AF;letter-spacing:.04em}
+.scene .lbl-strong{font-family:Alegreya,Georgia,serif;font-size:19px;font-weight:500;fill:#F4EEE3;letter-spacing:0}
+</style>
+</head>
+<body>
+<div class="frame"></div>
+<div class="copy">
+  <div class="brand">
+    <svg viewBox="0 0 240 240" aria-hidden="true">
+      <defs>
+        <clipPath id="siL"><rect x="0" y="0" width="120" height="240"/></clipPath>
+        <clipPath id="siR"><rect x="120" y="0" width="120" height="240"/></clipPath>
+        <mask id="sim"><rect width="240" height="240" fill="#fff"/><circle cx="170" cy="104" r="44" fill="#000"/></mask>
+      </defs>
+      <circle cx="120" cy="120" r="117" fill="none" stroke="#C2A14D" stroke-width="4"/>
+      <g clip-path="url(#siL)"><circle cx="120" cy="120" r="104" fill="#1E3A2B"/><circle cx="120" cy="120" r="40" fill="#E6C76B"/><path d="M99.3 70.1L91.7 51.6M81.8 81.8L60.6 60.6M70.1 99.3L51.6 91.7M66 120L36 120M70.1 140.7L51.6 148.3M81.8 158.2L60.6 179.4M99.3 169.9L91.7 188.4" stroke="#E6C76B" stroke-width="6" stroke-linecap="square"/></g>
+      <g clip-path="url(#siR)"><circle cx="120" cy="120" r="104" fill="#4A2A6E"/><circle cx="140" cy="120" r="50" fill="#C3BEF0" mask="url(#sim)"/><path d="M196 63Q196.882 71.118 205 72Q196.882 72.882 196 81Q195.118 72.882 187 72Q195.118 71.118 196 63Z" fill="#F4EEE3"/><path d="M184 170Q184.588 175.412 190 176Q184.588 176.588 184 182Q183.412 176.588 178 176Q183.412 175.412 184 170Z" fill="#F4EEE3"/><circle cx="208" cy="132" r="2.4" fill="#F4EEE3"/></g>
+      <rect x="119.25" y="14" width="1.5" height="212" fill="#C2A14D"/>
+    </svg>
+    Solar Inference
+  </div>
+  <h1>Put compute where the power <em>already is.</em></h1>
+  <p class="lead">Quiet AI computers in the yards of homes with power to spare.</p>
+  <p class="url">solarinference.com</p>
+</div>
+<svg class="scene" viewBox="0 0 640 440" aria-hidden="true">
+  <defs><mask id="moonmask"><rect width="640" height="440" fill="#fff"/><circle cx="566" cy="62" r="20" fill="#000"/></mask></defs>
+  <g opacity=".9">
+    <circle cx="92" cy="72" r="24" fill="#E6C76B"/>
+    <path d="M92 34v-12M92 122v-12M54 72h-12M142 72h-12M65 45l-8-8M127 107l-8-8M65 99l-8 8M127 37l-8 8" stroke="#E6C76B" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+    <circle cx="552" cy="68" r="22" fill="#C3BEF0" mask="url(#moonmask)"/>
+    <path d="M600 104q.6 5.4 6 6q-5.4.6-6 6q-.6-5.4-6-6q5.4-.6 6-6z" fill="#F4EEE3"/>
+    <path d="M512 30q.4 3.6 4 4q-3.6.4-4 4q-.4-3.6-4-4q3.6-.4 4-4z" fill="#F4EEE3"/>
+    <circle cx="490" cy="92" r="1.8" fill="#F4EEE3"/>
+  </g>
+  <path d="M16 372H624" stroke="#F4EEE3" stroke-opacity=".35" stroke-width="1.5"/>
+  <rect x="70" y="220" width="230" height="152" fill="#183022" stroke="#F4EEE3" stroke-width="2.5"/>
+  <polygon points="52,226 185,118 318,226" fill="#2E2766" stroke="#F4EEE3" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="209,137 298,210 288,222 199,149" fill="#13251B" stroke="#C2A14D" stroke-width="1.5"/>
+  <path d="M238 161L228 173M267 185L257 197" stroke="#C2A14D" stroke-width="1"/>
+  <rect x="100" y="252" width="56" height="46" fill="#E6C76B" opacity=".9"/>
+  <rect x="100" y="252" width="56" height="46" fill="none" stroke="#F4EEE3" stroke-width="2"/>
+  <rect x="214" y="252" width="56" height="46" fill="#E6C76B" opacity=".9"/>
+  <rect x="214" y="252" width="56" height="46" fill="none" stroke="#F4EEE3" stroke-width="2"/>
+  <rect x="163" y="304" width="44" height="68" fill="#2A1D15" stroke="#F4EEE3" stroke-width="2"/>
+  <path d="M420 314H300" stroke="#E6C76B" stroke-width="5" fill="none" stroke-dasharray="14 10"/>
+  <path d="M420 342H300" stroke="#C3BEF0" stroke-width="3" fill="none" opacity=".75"/>
+  <circle cx="412" cy="342" r="5" fill="#C3BEF0"/>
+  <path d="M570 352H630" stroke="#F4EEE3" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="4 6"/>
+  <rect x="428" y="236" width="134" height="26" fill="#3B2A1E" stroke="#8E6C4E" stroke-width="1.5"/>
+  <circle cx="466" cy="249" r="9" fill="#140F0B" stroke="#8E6C4E" stroke-width="1.5"/><path d="M466 242v14M459 249h14" stroke="#8E6C4E" stroke-width="2"/>
+  <circle cx="524" cy="249" r="9" fill="#140F0B" stroke="#8E6C4E" stroke-width="1.5"/><path d="M524 242v14M517 249h14" stroke="#8E6C4E" stroke-width="2"/>
+  <rect x="420" y="262" width="150" height="110" fill="#2A1D15" stroke="#C2A14D" stroke-width="2.5"/>
+  <rect x="438" y="282" width="86" height="5" fill="#4A3527"/>
+  <rect x="438" y="298" width="86" height="5" fill="#4A3527"/>
+  <rect x="438" y="314" width="86" height="5" fill="#4A3527"/>
+  <rect x="438" y="330" width="86" height="5" fill="#4A3527"/>
+  <rect x="438" y="346" width="86" height="5" fill="#4A3527"/>
+  <circle cx="552" cy="285" r="4" fill="#E6C76B"/>
+  <rect x="410" y="370" width="170" height="6" fill="#8A6A4C"/>
+  <text x="360" y="304" text-anchor="middle">heat</text>
+  <text x="360" y="362" text-anchor="middle">backup power</text>
+  <text x="600" y="342" text-anchor="middle">fiber</text>
+  <text class="lbl-strong" x="185" y="406" text-anchor="middle">The home</text>
+  <text class="lbl-strong" x="495" y="406" text-anchor="middle">The node</text>
+</svg>
+</body>
+</html>
