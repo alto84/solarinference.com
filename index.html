@@ -353,7 +353,7 @@ a{color:inherit}
       <div class="plate-head"><span class="wm" id="plate-title">Solar Inference home node</span><span>Design targets</span></div>
       <dl>
         <dt>Compute</dt><dd>8 × NVIDIA B300 GPUs in one server</dd>
-        <dt>Steady load</dt><dd>≈ 15 kW, around the clock</dd>
+        <dt>Power</dt><dd>Up to ≈ 15 kW, throttled to what the house isn’t using</dd>
         <dt>Heat output</dt><dd>≈ 51,000 BTU/h, about a small furnace</dd>
         <dt>Cooling</dt><dd>Sealed liquid loop and a quiet outdoor cooler</dd>
         <dt>Backup</dt><dd>A battery bank that carries the house in an outage</dd>
@@ -428,7 +428,7 @@ a{color:inherit}
       <div class="home">
         <h3>The home brings</h3>
         <ul class="lozenge-list">
-          <li>Room on its electrical service for about 20 kW, often through a 400 A upgrade or a load-managing panel</li>
+          <li>A standard 200 A service that the node shares through smart power throttling</li>
           <li>A level spot in the yard, back from the property line</li>
           <li>Fiber internet available at the street</li>
           <li>An owner, not a renter</li>
@@ -439,7 +439,7 @@ a{color:inherit}
         <h3>We handle</h3>
         <ul class="lozenge-list">
           <li>Zoning and permits, town by town</li>
-          <li>The utility: service, metering and peak-time limits</li>
+          <li>The utility: metering, transformers and peak-time limits</li>
           <li>Design, installation and insurance</li>
           <li>Monitoring and repairs, with a few visits a year</li>
           <li>Removal within days if the home is sold</li>
@@ -472,7 +472,7 @@ a{color:inherit}
       <h3 id="util-title">Working with the utility</h3>
       <p>A node is a big, steady load the utility can see and control.</p>
       <dl>
-        <div><dt>Service</dt><dd>More capacity where the home needs it, and room on the street’s transformer.</dd></div>
+        <div><dt>Service</dt><dd>Smart throttling fits the node within the home’s existing service, and we check room on the street’s transformer.</dd></div>
         <div><dt>Metering</dt><dd>Its own meter, so its power is on our account, not the household’s.</dd></div>
         <div><dt>Peak hours</dt><dd>The node turns down when the grid is strained, and the battery can help carry the house.</dd></div>
         <div><dt>Planning</dt><dd>We tell the utility where nodes go, so neighborhoods are ready before they arrive.</dd></div>
@@ -516,7 +516,7 @@ a{color:inherit}
         <ol class="timeline">
           <li><div><b>The first node</b><span>Built and run on our own site, to prove the template.</span></div></li>
           <li><div><b>The enclosure</b><span>Cooling, sound treatment, battery and heat recovery in one box.</span></div></li>
-          <li><div><b>The utility</b><span>Service, metering and peak-time control for a home node.</span></div></li>
+          <li><div><b>The utility</b><span>Smart throttling, metering and peak-time control for a home node.</span></div></li>
           <li><div><b>The towns</b><span>Rank New Jersey’s towns and ask the first ones for a ruling.</span></div></li>
           <li><div><b>First host homes</b><span>Once the first node has proven the design.</span></div></li>
         </ol>
@@ -539,6 +539,7 @@ a{color:inherit}
         <details><summary>Can it see our network?</summary><p>No. It has its own fiber line and never joins the home network. We never look at what customers run on it.</p></details>
       </div>
       <div>
+        <details><summary>Do we need a bigger electrical service?</summary><p>Usually not. Smart power throttling watches the home’s total draw and turns the node down first, so the house always gets what it needs and the service stays within its rating. The battery covers short peaks.</p></details>
         <details><summary>Does it raise our electric bill?</summary><p>No. The node’s power is on its own meter or included in our fee, never on the household’s bill.</p></details>
         <details><summary>Do we have to do anything?</summary><p>No. We monitor and repair it remotely, with a few scheduled visits a year. You only keep the circuit on and let us in on notice.</p></details>
         <details><summary>What if we sell the house?</summary><p>The agreement ends, and we remove the box within days.</p></details>
