@@ -8,18 +8,18 @@
 <link rel="canonical" href="https://solarinference.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Solar Inference">
-<meta property="og:title" content="Compute at Home · Solar Inference">
-<meta property="og:description" content="Solar Inference places quiet, datacenter-class AI computers in the yards of homes with power to spare. The home gets a fixed fee, winter heat and backup power.">
+<meta property="og:title" content="Compute at Home, for Medicine · Solar Inference">
+<meta property="og:description" content="Quiet, datacenter-class AI computers in the yards of homes with power to spare, linked into one distributed computer for drug discovery, development and clinical trials. The home gets a fixed fee, winter heat and backup power.">
 <meta property="og:url" content="https://solarinference.com/">
 <meta property="og:image" content="https://solarinference.com/og.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Solar Inference: Bringing AI computing home. A house with solar panels and a computing node in its yard, linked by heat and backup power.">
+<meta property="og:image:alt" content="Solar Inference: Bringing AI computing home. A house with solar panels and a computing node in its yard, linked by heat and backup power, with a molecule traced in the stars above.">
 <meta name="twitter:card" content="summary_large_image">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Solar Inference · Compute at Home</title>
-<meta name="description" content="Solar Inference places quiet, datacenter-class AI computers in the yards of homes with power to spare. The home gets a fixed fee, winter heat and backup power.">
+<title>Solar Inference · Compute at Home, for Medicine</title>
+<meta name="description" content="Solar Inference places quiet, datacenter-class AI computers in the yards of homes with power to spare and links them into a distributed computer for drug discovery, development and clinical trials. The home gets a fixed fee, winter heat and backup power.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..800;1,400..800&family=Alegreya+SC:wght@500;700&family=Hanken+Grotesk:wght@400;500;600&display=swap">
 <style>
 /* Layout: one long night-to-day scroll. Forest opens with an animated yard scene (the page's one bold moment), ivory carries the argument in hairline columns, velvet closes. */
@@ -102,7 +102,7 @@ a{color:inherit}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 @keyframes glow{0%,100%{opacity:.16}50%{opacity:.34}}
-@media (prefers-reduced-motion: reduce){.scene *{animation:none!important}}
+@media (prefers-reduced-motion: reduce){.scene *,.tw{animation:none!important}}
 
 /* Why now */
 .figs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,3vw,36px)}
@@ -208,6 +208,22 @@ a{color:inherit}
 .timeline b{display:block;font-family:var(--f-display);font-size:1.2rem;color:var(--head);padding-top:8px}
 .timeline span{color:var(--ink-2)}
 
+/* Medicine */
+.tw{animation:pulse 3.2s ease-in-out infinite}
+.transit{margin:0;background:linear-gradient(135deg,var(--forest-hi) 0%,var(--forest) 55%,var(--forest-lo) 100%);border:1px solid rgba(194,161,77,.4);padding:clamp(16px,3vw,36px) clamp(12px,3vw,36px) clamp(16px,2.5vw,28px)}
+.transit ol{list-style:none;padding:0;margin:clamp(12px,2vw,20px) 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;color:var(--cream-2);font-size:.95rem;text-align:center}
+.transit li b{display:block;font-family:var(--f-display);font-weight:600;font-size:1.2rem;color:var(--cream)}
+@media (max-width:640px){.transit ol{grid-template-columns:1fr;text-align:left}}
+.work{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,36px);margin-top:clamp(36px,5vw,56px)}
+@media (max-width:860px){.work{grid-template-columns:1fr}}
+.work article{border-top:1px solid var(--line-strong);padding-top:20px;display:grid;gap:10px;align-content:start}
+.work svg{width:34px;height:34px;color:var(--gold-ink)}
+.work h3{font-size:1.45rem;font-weight:600;color:var(--head);line-height:1.15}
+.work p{color:var(--ink-2)}
+.why-med{margin-top:clamp(48px,7vw,80px);display:grid;gap:clamp(24px,4vw,36px)}
+.why-med h3{font-size:clamp(1.5rem,2.4vw,1.9rem);font-weight:600;color:var(--head);max-width:40ch}
+#medicine .principles div{align-content:start}
+
 /* FAQ */
 .faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,4vw,56px)}
 @media (max-width:760px){.faq{grid-template-columns:1fr}}
@@ -260,6 +276,7 @@ a{color:inherit}
     <a class="brand wm" href="#top" aria-label="Solar Inference, back to top"><svg aria-hidden="true"><use href="#si-emblem"/></svg>Solar Inference</a>
     <nav class="nav" aria-label="Sections">
       <a href="#how">How it works</a>
+      <a href="#medicine">Medicine</a>
       <a href="#home">For homes</a>
       <a href="#towns">Towns</a>
       <a href="#faq">Questions</a>
@@ -272,16 +289,16 @@ a{color:inherit}
 <section class="hero" aria-labelledby="hero-title">
   <div class="wrap">
     <div>
-      <p class="eyebrow">Solar Inference · Compute at home</p>
+      <p class="eyebrow">Solar Inference · Compute at home, for medicine</p>
       <h1 id="hero-title">Bringing AI computing <em>home.</em></h1>
-      <p class="lead">We put quiet, datacenter-class AI computers in the back yards of homes that have electrical capacity to spare, and the home gets a fixed monthly fee, heat in the winter and backup power when the grid goes down (we take care of everything else).</p>
+      <p class="lead">We put quiet, datacenter-class AI computers in the back yards of homes with power to spare, and together those homes become a distributed computer for discovering and developing new medicines (the home, for its part, gets a fixed monthly fee, heat in the winter and backup power when the grid goes down).</p>
       <div class="ctas">
-        <a class="btn btn-gold" href="#how">See how it works</a>
+        <a class="btn btn-gold" href="#medicine">See the work</a>
         <a class="btn btn-line" href="#host">Host a node</a>
       </div>
       <p class="note">This is a concept we are still developing in New Jersey, and the figures on this page are our best estimates.</p>
     </div>
-    <svg class="scene" viewBox="0 0 640 440" role="img" aria-label="A house with solar panels and, beside it in the yard, a compact computing enclosure. Heat flows from the enclosure into the house, backup power runs along a second line, and a fiber line leaves to the street.">
+    <svg class="scene" viewBox="0 0 640 440" role="img" aria-label="A house with solar panels and, beside it in the yard, a compact computing enclosure. Heat flows from the enclosure into the house, backup power runs along a second line, and a fiber line leaves to the street. Above the house, stars trace the shape of a molecule, linked to the node.">
       <g opacity=".9">
         <circle cx="92" cy="72" r="24" fill="#E6C76B"/>
         <path d="M92 34v-12M92 122v-12M54 72h-12M142 72h-12M65 45l-8-8M127 107l-8-8M65 99l-8 8M127 37l-8 8" stroke="#E6C76B" stroke-width="3" stroke-linecap="round" opacity=".7"/>
@@ -289,6 +306,14 @@ a{color:inherit}
         <path d="M600 104q.6 5.4 6 6q-5.4.6-6 6q-.6-5.4-6-6q5.4-.6 6-6z" fill="#F4EEE3"/>
         <path d="M512 30q.4 3.6 4 4q-3.6.4-4 4q-.4-3.6-4-4q3.6-.4 4-4z" fill="#F4EEE3"/>
         <circle cx="490" cy="92" r="1.8" fill="#F4EEE3"/>
+      </g>
+      <g class="mol" aria-hidden="true">
+        <path d="M356 92C420 130 495 170 495 236" class="flow-fiber" stroke="#C3BEF0" stroke-width="2" fill="none" stroke-linecap="round" opacity=".7"/>
+        <path d="M300 58L313.9 66L313.9 82L300 90L286.1 82L286.1 66ZM313.9 66L327.7 58L341.6 66L341.6 82L327.7 90L313.9 82M286.1 66L272.2 58M327.7 58L327.7 42M341.6 82L355.5 90M300 90L300 106" stroke="#F4EEE3" stroke-opacity=".5" stroke-width="1.3" fill="none"/>
+        <circle cx="300" cy="74" r="8" fill="none" stroke="#F4EEE3" stroke-opacity=".3" stroke-width="1"/>
+        <circle class="tw" cx="300" cy="58" r="2.2" fill="#F4EEE3"/><circle cx="313.9" cy="66" r="2.2" fill="#F4EEE3"/><circle class="tw" cx="313.9" cy="82" r="2.2" fill="#F4EEE3" style="animation-delay:-1.1s"/><circle cx="300" cy="90" r="2.2" fill="#F4EEE3"/><circle cx="286.1" cy="82" r="2.2" fill="#F4EEE3"/><circle cx="286.1" cy="66" r="2.2" fill="#F4EEE3"/>
+        <circle cx="327.7" cy="58" r="2.2" fill="#F4EEE3"/><circle class="tw" cx="341.6" cy="66" r="2.2" fill="#F4EEE3" style="animation-delay:-2s"/><circle cx="341.6" cy="82" r="2.2" fill="#F4EEE3"/><circle cx="327.7" cy="90" r="2.2" fill="#F4EEE3"/>
+        <circle cx="272.2" cy="58" r="2.2" fill="#F4EEE3"/><circle class="tw" cx="327.7" cy="42" r="3.2" fill="#E6C76B" style="animation-delay:-.6s"/><circle cx="355.5" cy="90" r="3.2" fill="#E6C76B"/><circle cx="300" cy="106" r="3.2" fill="#E6C76B"/>
       </g>
       <rect x="0" y="372" width="640" height="68" fill="#13251B" opacity=".55"/>
       <path d="M16 372H624" stroke="#F4EEE3" stroke-opacity=".35" stroke-width="1.5"/>
@@ -341,12 +366,93 @@ a{color:inherit}
   </div>
 </section>
 
+<section class="sec" id="medicine" aria-labelledby="med-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">The work</p>
+      <h2 class="h2" id="med-title">Together, the homes become a computer for medicine.</h2>
+      <p class="lede">One node is useful on its own, but the real promise is in many of them working together, and some of the most valuable work a distributed computer can do is in the discovery and development of new medicines, since so much of it splits naturally into thousands of independent pieces (which is exactly what a network of homes is good at).</p>
+    </div>
+    <figure class="transit" aria-label="One home with a node, then a row of homes whose nodes share one fiber line, and that line running to a glowing molecule.">
+      <svg class="scene" viewBox="0 0 1080 300" aria-hidden="true">
+        <defs>
+          <radialGradient id="mhalo"><stop offset="0" stop-color="#E6C76B" stop-opacity=".7"/><stop offset="1" stop-color="#E6C76B" stop-opacity="0"/></radialGradient>
+          <symbol id="hn" viewBox="0 0 120 80">
+            <rect x="8" y="40" width="58" height="38" fill="#183022" stroke="#F4EEE3" stroke-width="2"/>
+            <polygon points="2,42 37,14 72,42" fill="#2E2766" stroke="#F4EEE3" stroke-width="2" stroke-linejoin="round"/>
+            <polygon points="42,19 64,37 61,40 39,22" fill="#13251B" stroke="#C2A14D" stroke-width="1"/>
+            <rect x="17" y="50" width="14" height="12" fill="#E6C76B" opacity=".85"/>
+            <rect x="43" y="50" width="14" height="12" fill="#E6C76B" opacity=".85"/>
+            <rect x="31" y="62" width="10" height="16" fill="#2A1D15"/>
+            <path d="M84 64H66" stroke="#E6C76B" stroke-width="2" stroke-dasharray="3 3"/>
+            <rect x="86" y="44" width="26" height="6" fill="#3B2A1E" stroke="#8E6C4E" stroke-width="1"/>
+            <rect x="84" y="50" width="30" height="28" fill="#2A1D15" stroke="#C2A14D" stroke-width="1.6"/>
+            <path d="M89 60h14M89 66h14M89 72h14" stroke="#4A3527" stroke-width="2"/>
+            <circle cx="108" cy="56" r="1.8" fill="#E6C76B"/>
+          </symbol>
+        </defs>
+        <g fill="#F4EEE3" opacity=".8"><circle cx="120" cy="44" r="1.6"/><circle cx="330" cy="62" r="1.4"/><circle cx="560" cy="36" r="1.8"/><circle cx="760" cy="70" r="1.4"/><circle cx="690" cy="26" r="1.6"/><circle cx="1040" cy="40" r="1.6"/></g>
+        <path d="M20 286H1060" stroke="#F4EEE3" stroke-opacity=".3" stroke-width="1.5"/>
+        <circle class="glow" cx="960" cy="150" r="130" fill="url(#mhalo)"/>
+        <path class="flow-fiber" d="M238 218V116H871" stroke="#E6C76B" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path class="flow-fiber" d="M439 257V116M534 257V116M629 257V116M724 257V116" stroke="#C3BEF0" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <use href="#hn" x="40" y="130" width="240" height="160"/>
+        <use href="#hn" x="360" y="222" width="96" height="64"/>
+        <use href="#hn" x="455" y="222" width="96" height="64"/>
+        <use href="#hn" x="550" y="222" width="96" height="64"/>
+        <use href="#hn" x="645" y="222" width="96" height="64"/>
+        <path d="M930 116L959.4 133L959.4 167L930 184L900.6 167L900.6 133ZM959.4 133L988.9 116L1018.3 133L1018.3 167L988.9 184L959.4 167M900.6 133L871 116M988.9 116L988.9 82M1018.3 133L1047.7 116M1018.3 167L1047.7 184M930 184L930 218L900.6 235" stroke="#F4EEE3" stroke-opacity=".6" stroke-width="2.4" fill="none" stroke-linejoin="round"/>
+        <circle cx="930" cy="150" r="19" fill="none" stroke="#F4EEE3" stroke-opacity=".35" stroke-width="1.6"/>
+        <g fill="#F4EEE3"><circle cx="930" cy="116" r="4.5"/><circle cx="959.4" cy="133" r="4.5"/><circle cx="959.4" cy="167" r="4.5"/><circle cx="930" cy="184" r="4.5"/><circle cx="900.6" cy="167" r="4.5"/><circle cx="900.6" cy="133" r="4.5"/><circle cx="1018.3" cy="133" r="4.5"/><circle cx="1018.3" cy="167" r="4.5"/><circle cx="988.9" cy="184" r="4.5"/><circle cx="1047.7" cy="116" r="4.5"/><circle cx="900.6" cy="235" r="4.5"/></g>
+        <circle class="tw" cx="871" cy="116" r="6.5" fill="#E6C76B"/><circle class="tw" cx="988.9" cy="82" r="6.5" fill="#E6C76B" style="animation-delay:-1.2s"/><circle class="tw" cx="988.9" cy="116" r="6.5" fill="#E6C76B" style="animation-delay:-2.1s"/><circle class="tw" cx="1047.7" cy="184" r="6.5" fill="#E6C76B" style="animation-delay:-.7s"/><circle cx="930" cy="218" r="6.5" fill="#E6C76B"/>
+      </svg>
+      <figcaption>
+        <ol>
+          <li><b>One home</b>One node in one back yard.</li>
+          <li><b>A network of homes</b>Many nodes, working as one computer.</li>
+          <li><b>Medicine</b>Discovery, development and clinical trials.</li>
+        </ol>
+      </figcaption>
+    </figure>
+    <div class="work">
+      <article>
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M13 6l7 4v8l-7 4-7-4v-8z"/><path d="M20 10l6-3M13 22v6M20 18l6 3"/><circle cx="26" cy="7" r="1.6"/><circle cx="26" cy="21" r="1.6"/></svg>
+        <h3>Discovery</h3>
+        <p>Predicting the shapes of proteins, screening billions of candidate molecules against a target and simulating how a drug actually binds, all of which breaks into small, independent jobs that can run in a thousand back yards at once.</p>
+      </article>
+      <article>
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 27h24M4 27V5"/><path d="M5 24c4 0 5-15 9-15s5 11 8 11 4-4 6-4"/></svg>
+        <h3>Development</h3>
+        <p>Modeling how a drug moves through the body and simulating a trial’s design before the first patient enrolls, which is work the FDA has begun to welcome (it now accepts computer models in place of some animal testing).</p>
+      </article>
+      <article>
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="6" y="6" width="20" height="23"/><path d="M12 4h8v4h-8z"/><path d="M10 15l2 2 4-4M10 23l2 2 4-4M19 15h4M19 23h4"/></svg>
+        <h3>Clinical trials</h3>
+        <p>Running private AI models on the paperwork and logistics that slow every trial (protocols, site selection, enrollment forecasts and reports), on hardware that can keep a sponsor’s data encrypted even while it computes.</p>
+      </article>
+    </div>
+    <div class="why-med">
+      <h3>Why medicine? Because that is where computing can do the most good.</h3>
+      <div class="figs">
+        <div class="fig"><b class="num">~90%</b><p>of drug candidates that enter human trials never reach approval.</p><p class="src">Sun et al., Acta Pharmaceutica Sinica B, 2022</p></div>
+        <div class="fig"><b class="num">10–15 years</b><p>from discovery to an approved medicine, on average.</p><p class="src">PhRMA</p></div>
+        <div class="fig"><b class="num">1 exaflop</b><p>first passed in 2020 by Folding@home, on volunteers’ home computers studying the coronavirus.</p><p class="src">Folding@home, via TechCrunch, March 2020</p></div>
+        <div class="fig"><b class="num">2024</b><p>The Nobel Prize in Chemistry went to computational protein design and structure prediction.</p><p class="src">nobelprize.org</p></div>
+      </div>
+    </div>
+    <div class="principles">
+      <div><h3>We start with public data.</h3><p>The first work on the network uses public information (chemical libraries, protein structures and simulations), and anything that touches patient data waits until we can meet the safeguards that trial sponsors and regulators require, which the newest GPUs make far more realistic, since they can keep data encrypted even while they compute on it.</p></div>
+      <div><h3>Our part is the computing.</h3><p>We have no plans to develop medicines of our own, since what we bring is the computing (and, over time, the AI tools that run on it) for the scientists and companies who do that hard work.</p></div>
+    </div>
+  </div>
+</section>
+
 <section class="sec" id="how" aria-labelledby="how-title">
   <div class="wrap product">
     <div class="copy">
       <p class="eyebrow">The node</p>
       <h2 class="h2" id="how-title">About the size of an air conditioner (and a lot more interesting).</h2>
-      <p class="lede">Each node is a single datacenter-class server (eight NVIDIA B300 GPUs) sealed inside a cooled enclosure that sits in the yard much the way an AC condenser does. We own it, install it, insure it and run it remotely, and AI teams rent its computing by the hour through online marketplaces.</p>
+      <p class="lede">Each node is a single datacenter-class server (eight NVIDIA B300 GPUs) sealed inside a cooled enclosure that sits in the yard much the way an AC condenser does. We own it, install it, insure it and run it remotely, and scientists and AI teams rent its computing, by the hour through online marketplaces or under longer contracts (more and more of it, we expect, for drug discovery and development).</p>
       <p class="lede">It has its own meter and its own fiber line, so it never touches the home’s network or the household’s electric bill.</p>
     </div>
     <div class="plate" role="group" aria-labelledby="plate-title">
@@ -406,8 +512,8 @@ a{color:inherit}
       <h2 class="h2" id="money-title">Following the money.</h2>
     </div>
     <div class="chain">
-      <div><h3>Renters</h3><p>AI teams rent GPU time by the hour, online.</p></div>
-      <div><h3>Marketplaces</h3><p>Match renters to machines and keep a share of each hour.</p></div>
+      <div><h3>Renters</h3><p>AI teams and drug-discovery scientists rent computing by the hour or by contract.</p></div>
+      <div><h3>Marketplaces</h3><p>Match renters to machines and keep a share of each hour, while larger research customers contract with us directly.</p></div>
       <div class="us"><h3>Solar Inference</h3><p>Owns and runs the node, and pays for the hardware, power, internet, insurance and upkeep.</p></div>
       <div><h3>The host home</h3><p>A fixed monthly fee, winter heat and backup power.</p></div>
     </div>
@@ -515,6 +621,7 @@ a{color:inherit}
         <h3 class="sub">Next</h3>
         <ol class="timeline">
           <li><div><b>The first node</b><span>Built and run on our own site, to prove the template.</span></div></li>
+          <li><div><b>The first research work</b><span>Discovery and development jobs on our machines, starting with public data.</span></div></li>
           <li><div><b>The enclosure</b><span>Cooling, sound treatment, battery and heat recovery in one box.</span></div></li>
           <li><div><b>The utility</b><span>Smart throttling, metering and peak-time control for a home node.</span></div></li>
           <li><div><b>The towns</b><span>Rank New Jersey’s towns and ask the first ones for a ruling.</span></div></li>
@@ -537,11 +644,13 @@ a{color:inherit}
         <details><summary>What if the power goes out?</summary><p>The battery backs up the house, and the computer shuts itself down first so that everything in the battery goes to the house.</p></details>
         <details><summary>Is it safe?</summary><p>It is listed equipment on its own circuits, watched around the clock for heat and smoke and able to be shut off remotely, and we insure it, with a liability policy that covers the home.</p></details>
         <details><summary>Can it see our network?</summary><p>No. It has its own fiber line and never joins the home network, and we never look at what our customers run on it.</p></details>
+        <details><summary>What will it compute?</summary><p>Mostly AI work for research teams, and more and more of it in drug discovery and development (protein structures, molecular screening, simulations and the models behind clinical trials), and whatever it runs, it never touches your home or your network.</p></details>
       </div>
       <div>
         <details><summary>Do we need a bigger electrical service?</summary><p>Usually not. Smart power throttling watches the home’s total draw and turns the node down first, so the house always gets what it needs and the service stays within its rating (the battery covers short peaks).</p></details>
         <details><summary>Does it raise our electric bill?</summary><p>No. The node’s power is either on its own meter or included in our fee, and it never shows up on the household’s bill.</p></details>
         <details><summary>Do we have to do anything?</summary><p>Not really. We monitor and repair it remotely with a few scheduled visits a year, and all we ask is that you keep the circuit on and let us in when we give notice.</p></details>
+        <details><summary>Will patient data be in our yard?</summary><p>Not for now. We start with work that uses public data, and we would only take on patient information encrypted from end to end, under the safeguards that trial sponsors and regulators require.</p></details>
         <details><summary>What if we sell the house?</summary><p>The agreement ends, and we remove the box within days.</p></details>
         <details><summary>Is our town allowed?</summary><p>That is the first thing we check. If your town’s code is silent we ask for a ruling, and if your town has banned data centers we simply won’t place a node there.</p></details>
       </div>
@@ -553,7 +662,7 @@ a{color:inherit}
   <div class="wrap">
     <span class="orn" aria-hidden="true"></span>
     <h2 id="close-title">We would love to hear from you.</h2>
-    <p>More than anything, we hope that ordinary homes get to share in the AI buildout, so whether you are thinking about hosting a node or bringing this to your town, please write to us.</p>
+    <p>More than anything, we hope that ordinary homes get to share in the AI buildout, and in the medicines it can help bring about, so whether you are thinking about hosting a node, bringing this to your town or running your research on the network, please write to us.</p>
     <div class="contact" id="contact">
       <code id="contact-email">admin@solarinference.com</code>
       <button type="button" id="copy-email">Copy address</button>
@@ -579,6 +688,12 @@ a{color:inherit}
       <span>Home capacity and Span nodes: Network World, May 13, and Fortune, May 15, 2026; Span’s figure.</span>
       <span>Heata: MIT Technology Review, 2023, and later coverage.</span>
       <span>Data-center bans: NJ Monitor, August 20, 2026.</span>
+      <span>Clinical failure rate: Sun et al., “Why 90% of clinical drug development fails,” Acta Pharmaceutica Sinica B, July 2022.</span>
+      <span>Development time: PhRMA industry profiles.</span>
+      <span>Folding@home: the project’s March 2020 report, via TechCrunch, March 26, 2020.</span>
+      <span>Nobel Prize in Chemistry 2024 (Baker; Hassabis and Jumper): nobelprize.org.</span>
+      <span>Computer models in place of animal testing: FDA Modernization Act 2.0 (2022) and the FDA roadmap of April 10, 2025.</span>
+      <span>Encrypted computing on eight-GPU Blackwell servers: NVIDIA developer blog.</span>
     </div>
   </div>
 </footer>
