@@ -4,284 +4,35 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#13251B">
-<link rel="icon" href="/emblem.svg" type="image/svg+xml">
+<title>Solar Inference · Compute at Home</title>
+<meta name="description" content="Solar Inference is building full-size AI computers into homes, starting with our own, each with its own power, cooling, battery and fiber line. The host home gets fixed monthly rent, winter heat and backup power.">
+<link rel="icon" href="emblem.svg" type="image/svg+xml">
 <link rel="canonical" href="https://solarinference.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Solar Inference">
-<meta property="og:title" content="Compute at Home, for Medicine · Solar Inference">
-<meta property="og:description" content="Quiet, datacenter-class AI computers in the yards of homes with power to spare, linked into one distributed computer for drug discovery, development and clinical trials. The home gets a fixed fee, winter heat and backup power.">
+<meta property="og:title" content="Bringing AI computing home · Solar Inference">
+<meta property="og:description" content="A full-size AI computer, built into a home with its own power, cooling, battery and fiber line. Ours first, then a couple of other homes.">
 <meta property="og:url" content="https://solarinference.com/">
 <meta property="og:image" content="https://solarinference.com/og.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Solar Inference: Bringing AI computing home. A house with solar panels and a computing node in its yard, linked by heat and backup power, with a molecule traced in the stars above.">
+<meta property="og:image:alt" content="Solar Inference: Bringing AI computing home. A house with solar panels and a large AI computer in its yard, linked by heat and backup power.">
 <meta name="twitter:card" content="summary_large_image">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Solar Inference · Compute at Home, for Medicine</title>
-<meta name="description" content="Solar Inference places quiet, datacenter-class AI computers in the yards of homes with power to spare and links them into a distributed computer for drug discovery, development and clinical trials. The home gets a fixed fee, winter heat and backup power.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..800;1,400..800&family=Alegreya+SC:wght@500;700&family=Hanken+Grotesk:wght@400;500;600&display=swap">
-<style>
-/* Layout: one long night-to-day scroll. Forest opens with an animated yard scene (the page's one bold moment), ivory carries the argument in hairline columns, velvet closes. */
-:root{
-  --paper:#F4EEE3; --sheet:#FBF8F2; --well:#EAE1D2; --line:#D9CCB7; --line-strong:#8A6A4C;
-  --ink:#1C1511; --ink-2:#5C4A3B; --head:#2E2766; --gold-ink:#7E6221;
-  --forest:#1E3A2B; --forest-hi:#24452F; --forest-lo:#13251B; --velvet:#2E2766; --plum:#4A2A6E;
-  --gold:#C2A14D; --gold-bright:#E6C76B; --lav:#C3BEF0; --cream:#F4EEE3; --cream-2:#CFC3AF; --bark:#2A1D15; --on-gold:#1C1511;
-  --f-display:"Alegreya","Iowan Old Style",Georgia,serif;
-  --f-sc:"Alegreya SC",Alegreya,Georgia,serif;
-  --f-sans:"Hanken Grotesk","Segoe UI",system-ui,-apple-system,sans-serif;
-  --wrap:1120px;
-  --gutter:clamp(16px,4vw,40px);
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){--paper:#140F0B;--sheet:#21170F;--well:#100C09;--line:#3E2E22;--line-strong:#8E6C4E;--ink:#F2EADD;--ink-2:#B9A894;--head:#C3BEF0;--gold-ink:#C2A14D;color-scheme:dark}
-}
-:root[data-theme="dark"]{--paper:#140F0B;--sheet:#21170F;--well:#100C09;--line:#3E2E22;--line-strong:#8E6C4E;--ink:#F2EADD;--ink-2:#B9A894;--head:#C3BEF0;--gold-ink:#C2A14D;color-scheme:dark}
-
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-body{background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--f-sans);-webkit-font-smoothing:antialiased}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--forest-lo)}
-h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
-p,ul,ol,dl{margin:0}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
-.wrap{max-width:calc(var(--wrap) + 2 * var(--gutter));margin-inline:auto;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
-.eyebrow{font:600 .78rem/1.3 var(--f-sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink)}
-.h2{font-weight:600;font-size:clamp(2rem,3.6vw,3rem);line-height:1.08;color:var(--head)}
-.lede{color:var(--ink-2);font-size:1.15rem;max-width:62ch}
-.sec{padding-block:clamp(64px,9vw,112px);border-top:1px solid var(--line)}
-.sec-head{display:grid;gap:14px;margin-bottom:clamp(32px,5vw,56px)}
-.wm{font-family:var(--f-sc);font-weight:500;letter-spacing:.02em}
-.lozenge-list{list-style:none;padding:0;display:grid;gap:14px}
-.lozenge-list li{position:relative;padding-left:26px}
-.lozenge-list li::before{content:"";position:absolute;left:4px;top:.62em;width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
-.num{font-variant-numeric:lining-nums tabular-nums}
-.fig b,.stat b,.steps li::before,.timeline li::before{font-variant-numeric:lining-nums}
-
-/* Top bar */
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--forest-lo);color:var(--cream);border-bottom:1px solid rgba(194,161,77,.35)}
-.top .wrap{display:flex;align-items:center;gap:24px;min-height:64px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:1.2rem}
-.brand svg{width:30px;height:30px;flex:none}
-.nav{display:flex;gap:22px;margin-left:auto;font-size:.95rem}
-.nav a{text-decoration:none;color:var(--cream-2)}
-.nav a:hover{color:var(--cream)}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 20px;border-radius:2px;font:600 .95rem/1 var(--f-sans);text-decoration:none;white-space:nowrap}
-.btn-gold{background:var(--gold-bright);color:var(--on-gold)}
-.btn-gold:hover{background:#F0D58A}
-.btn-line{border:1.5px solid rgba(244,238,227,.55);color:var(--cream)}
-.btn-line:hover{border-color:var(--cream)}
-.top .btn{min-height:40px;padding:0 16px}
-@media (max-width:860px){.nav{display:none}.top .btn{margin-left:auto}}
-
-/* Hero */
-.hero{background:linear-gradient(135deg,var(--forest-hi) 0%,var(--forest) 50%,var(--forest-lo) 100%);color:var(--cream)}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(32px,5vw,72px);align-items:center;padding-block:clamp(56px,8vw,104px)}
-@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
-.hero .eyebrow{color:var(--gold)}
-.hero h1{font-weight:500;font-size:clamp(2.6rem,5.4vw,4.4rem);line-height:1.03;letter-spacing:-.01em;margin-top:18px}
-.hero h1 em{font-style:italic;color:var(--gold-bright)}
-.hero .lead{font-size:clamp(1.1rem,1.6vw,1.3rem);line-height:1.55;color:var(--cream-2);margin-top:22px;max-width:46ch}
-.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.hero .note{margin-top:26px;font-size:.88rem;color:var(--cream-2);opacity:.85}
-.scene{width:100%;height:auto;display:block}
-.scene text{font-family:var(--f-sans);font-size:13px;fill:var(--cream-2);letter-spacing:.04em}
-.scene .lbl-strong{font-family:var(--f-display);font-size:17px;font-weight:600;fill:var(--cream);letter-spacing:0}
-.flow-heat{stroke-dasharray:10 9;animation:flow 1.4s linear infinite}
-.flow-fiber{stroke-dasharray:2 6;animation:flow-r 1.8s linear infinite}
-.dot{animation:dot 2.6s ease-in-out infinite}
-.fan{transform-box:fill-box;transform-origin:center;animation:spin 1.8s linear infinite}
-.led{animation:pulse 2.4s ease-in-out infinite}
-.glow{animation:glow 5s ease-in-out infinite}
-@keyframes flow{to{stroke-dashoffset:-19}}
-@keyframes flow-r{to{stroke-dashoffset:-16}}
-@keyframes dot{0%{transform:translateX(0);opacity:0}12%{opacity:1}88%{opacity:1}100%{transform:translateX(-112px);opacity:0}}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-@keyframes glow{0%,100%{opacity:.16}50%{opacity:.34}}
-@media (prefers-reduced-motion: reduce){.scene *,.tw{animation:none!important}}
-
-/* Why now */
-.figs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,3vw,36px)}
-@media (max-width:900px){.figs{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:520px){.figs{grid-template-columns:1fr}}
-.fig{border-top:2px solid var(--head);padding-top:18px;display:grid;gap:10px;align-content:start}
-.fig b{font-family:var(--f-display);font-weight:600;font-size:clamp(2.3rem,3.8vw,3.1rem);line-height:1;color:var(--head)}
-.fig .src{font-size:.8rem;color:var(--ink-2)}
-
-/* Product */
-.product{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,5vw,72px);align-items:start}
-@media (max-width:900px){.product{grid-template-columns:1fr}}
-.product .copy{display:grid;gap:18px}
-.plate{background:var(--sheet);border:1.5px solid var(--line-strong);padding:clamp(20px,3vw,32px);position:relative}
-.plate::before{content:"";position:absolute;inset:6px;border:1px solid var(--line);pointer-events:none}
-.plate-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line-strong);padding-bottom:12px;margin-bottom:6px;position:relative}
-.plate-head .wm{font-size:1.15rem;color:var(--head)}
-.plate-head span:last-child{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-ink);font-weight:600}
-.plate dl{display:grid;grid-template-columns:minmax(0,10.5em) minmax(0,1fr);position:relative}
-.plate dt,.plate dd{padding-block:11px;border-bottom:1px solid var(--line);margin:0}
-.plate dt{font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);font-weight:600;padding-right:12px;padding-top:13px}
-.plate dd{font-variant-numeric:tabular-nums}
-.plate dl > :nth-last-child(-n+2){border-bottom:0}
-.plate .plate-note{font-size:.82rem;color:var(--ink-2);margin-top:12px;position:relative}
-@media (max-width:520px){.plate dl{grid-template-columns:1fr}.plate dt{border-bottom:0;padding-bottom:0}}
-
-/* Mini utility */
-.util{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,3vw,36px)}
-@media (max-width:900px){.util{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:520px){.util{grid-template-columns:1fr}}
-.util article{border-top:1px solid var(--line-strong);padding-top:20px;display:grid;gap:10px;align-content:start}
-.util svg{width:34px;height:34px;color:var(--gold-ink)}
-.util h3{font-size:1.45rem;font-weight:600;color:var(--head);line-height:1.15}
-.util p{color:var(--ink-2)}
-.util .figure{font-family:var(--f-display);font-style:italic;font-size:1.05rem;color:var(--gold-ink)}
-
-/* Money */
-.chain{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;counter-reset:none}
-.chain > div{position:relative;padding:24px 28px 24px 24px;background:var(--sheet);border:1px solid var(--line);display:grid;gap:8px;align-content:start}
-.chain > div + div{border-left:0}
-.chain > div:not(:last-child)::after{content:"";position:absolute;right:-9px;top:50%;width:16px;height:16px;background:var(--gold);transform:translateY(-50%) rotate(45deg);z-index:1;border:3px solid var(--paper)}
-.chain h3{font-size:1.35rem;font-weight:600;color:var(--head)}
-.chain p{color:var(--ink-2);font-size:1rem}
-.chain .us{background:var(--velvet);border-color:var(--velvet)}
-.chain .us h3{color:var(--cream)} .chain .us p{color:var(--lav)}
-@media (max-width:860px){.chain{grid-template-columns:1fr}.chain > div + div{border-left:1px solid var(--line);border-top:0}.chain > div:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-9px;transform:translateX(-50%) rotate(45deg)}}
-.principles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,40px);margin-top:clamp(28px,4vw,44px)}
-@media (max-width:760px){.principles{grid-template-columns:1fr}}
-.principles div{display:grid;gap:8px}
-.principles h3{font-size:1.3rem;font-weight:600;color:var(--head)}
-.principles p{color:var(--ink-2)}
-
-/* Host */
-.host{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,32px)}
-@media (max-width:760px){.host{grid-template-columns:1fr}}
-.host > div{padding:clamp(24px,3vw,36px);display:grid;gap:18px;align-content:start}
-.host h3{font-size:1.6rem;font-weight:600}
-.host .home{background:var(--sheet);border:1px solid var(--line)}
-.host .home h3{color:var(--head)}
-.host .us{background:var(--velvet);color:var(--cream);border:1.5px solid var(--gold)}
-.host .us li::before{background:var(--gold-bright)}
-
-/* Towns */
-.towns{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(32px,5vw,72px);align-items:start}
-@media (max-width:900px){.towns{grid-template-columns:1fr}}
-.steps{list-style:none;padding:0;display:grid;gap:0;counter-reset:step}
-.steps li{counter-increment:step;display:grid;grid-template-columns:3.2rem minmax(0,1fr);gap:4px 16px;padding-block:18px;border-top:1px solid var(--line)}
-.steps li:last-child{border-bottom:1px solid var(--line)}
-.steps li::before{content:counter(step);grid-row:span 2;font-family:var(--f-display);font-weight:600;font-size:2rem;line-height:1;color:var(--gold-ink)}
-.steps h3{font-size:1.25rem;font-weight:600;color:var(--head)}
-.steps p{color:var(--ink-2)}
-.stat{display:flex;gap:28px;flex-wrap:wrap;margin-top:28px}
-.stat div{display:grid;gap:4px}
-.stat b{font-family:var(--f-display);font-weight:600;font-size:clamp(2.4rem,4vw,3.2rem);line-height:1;color:var(--head)}
-.stat span{color:var(--ink-2);font-size:.95rem;max-width:22ch}
-.utility{background:var(--well);border:1px solid var(--line);padding:clamp(24px,3vw,36px);display:grid;gap:18px}
-.utility h3{font-size:1.5rem;font-weight:600;color:var(--head)}
-.utility dl{display:grid;gap:14px}
-.utility dt{font-weight:600}
-.utility dd{margin:2px 0 0;color:var(--ink-2)}
-
-/* Others */
-.others{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,36px)}
-@media (max-width:860px){.others{grid-template-columns:1fr}}
-.others article{border-top:1px solid var(--line-strong);padding-top:20px;display:grid;gap:8px;align-content:start}
-.others h3{font-size:1.45rem;font-weight:600;color:var(--head)}
-.others .where{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--gold-ink)}
-.others p{color:var(--ink-2)}
-.others .us{border-top:2px solid var(--gold)}
-
-/* Now */
-.now{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px)}
-@media (max-width:860px){.now{grid-template-columns:1fr}}
-.now h3.sub{font-size:1.5rem;font-weight:600;color:var(--head);margin-bottom:18px}
-.built{display:grid;gap:20px}
-.built div{display:grid;gap:4px}
-.built b{font-weight:600}
-.built p{color:var(--ink-2)}
-.timeline{list-style:none;padding:0;display:grid;counter-reset:t;position:relative}
-.timeline li{counter-increment:t;position:relative;display:grid;grid-template-columns:44px minmax(0,1fr);gap:16px;padding-bottom:22px}
-.timeline li::before{content:counter(t);width:44px;height:44px;border-radius:50%;background:var(--velvet);color:var(--cream);border:2px solid var(--gold);display:grid;place-items:center;font:600 1.05rem/1 var(--f-display)}
-.timeline li:not(:last-child)::after{content:"";position:absolute;left:21px;top:46px;bottom:2px;width:2px;background:var(--line)}
-.timeline b{display:block;font-family:var(--f-display);font-size:1.2rem;color:var(--head);padding-top:8px}
-.timeline span{color:var(--ink-2)}
-
-/* Medicine */
-.tw{animation:pulse 3.2s ease-in-out infinite}
-.transit{margin:0;background:linear-gradient(135deg,var(--forest-hi) 0%,var(--forest) 55%,var(--forest-lo) 100%);border:1px solid rgba(194,161,77,.4);padding:clamp(16px,3vw,36px) clamp(12px,3vw,36px) clamp(16px,2.5vw,28px)}
-.transit ol{list-style:none;padding:0;margin:clamp(12px,2vw,20px) 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;color:var(--cream-2);font-size:.95rem;text-align:center}
-.transit li b{display:block;font-family:var(--f-display);font-weight:600;font-size:1.2rem;color:var(--cream)}
-@media (max-width:640px){.transit ol{grid-template-columns:1fr;text-align:left}}
-.work{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,36px);margin-top:clamp(36px,5vw,56px)}
-@media (max-width:860px){.work{grid-template-columns:1fr}}
-.work article{border-top:1px solid var(--line-strong);padding-top:20px;display:grid;gap:10px;align-content:start}
-.work svg{width:34px;height:34px;color:var(--gold-ink)}
-.work h3{font-size:1.45rem;font-weight:600;color:var(--head);line-height:1.15}
-.work p{color:var(--ink-2)}
-.why-med{margin-top:clamp(48px,7vw,80px);display:grid;gap:clamp(24px,4vw,36px)}
-.why-med h3{font-size:clamp(1.5rem,2.4vw,1.9rem);font-weight:600;color:var(--head);max-width:40ch}
-#medicine .principles div{align-content:start}
-
-/* FAQ */
-.faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,4vw,56px)}
-@media (max-width:760px){.faq{grid-template-columns:1fr}}
-.faq details{border-top:1px solid var(--line);padding-block:4px}
-.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:56px;font-family:var(--f-display);font-size:1.2rem;font-weight:600;color:var(--head)}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"";width:9px;height:9px;flex:none;border-right:2px solid var(--gold-ink);border-bottom:2px solid var(--gold-ink);transform:rotate(45deg) translate(-2px,-2px);transition:transform .2s}
-.faq details[open] summary::after{transform:rotate(225deg)}
-.faq details p{color:var(--ink-2);padding-bottom:16px;max-width:60ch}
-
-/* Close */
-.close{background:var(--velvet);color:var(--cream);text-align:center}
-.close .wrap{padding-block:clamp(72px,10vw,128px);display:grid;justify-items:center;gap:22px}
-.close .orn{width:14px;height:14px;background:var(--gold);transform:rotate(45deg)}
-.close h2{font-weight:500;font-style:italic;font-size:clamp(2.2rem,5vw,4rem);line-height:1.1;max-width:18ch}
-.close p{color:var(--lav);max-width:52ch;font-size:1.1rem}
-.contact{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center;margin-top:6px}
-.contact code{font:500 1.05rem/1 var(--f-sans);background:rgba(244,238,227,.08);border:1px solid rgba(195,190,240,.4);padding:13px 16px;border-radius:2px;user-select:all;color:var(--cream)}
-.contact button{min-height:44px;padding:0 18px;border-radius:2px;border:0;background:var(--gold-bright);color:var(--on-gold);font:600 .95rem/1 var(--f-sans);cursor:pointer}
-.contact .msg{flex-basis:100%;font-size:.9rem;color:var(--lav);min-height:1.3em}
-
-/* Footer */
-.foot{background:var(--forest-lo);color:var(--cream-2);font-size:.88rem}
-.foot .wrap{padding-block:40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:28px}
-@media (max-width:760px){.foot .wrap{grid-template-columns:1fr}}
-.foot .brand{color:var(--cream)}
-.foot p + p{margin-top:8px}
-.foot .srcs{display:grid;gap:6px}
-.foot .srcs b{color:var(--cream);font-weight:600}
-</style>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <defs>
-    <clipPath id="siL"><rect x="0" y="0" width="120" height="240"/></clipPath>
-    <clipPath id="siR"><rect x="120" y="0" width="120" height="240"/></clipPath>
-    <mask id="sim"><rect width="240" height="240" fill="#fff"/><circle cx="170" cy="104" r="44" fill="#000"/></mask>
-    <mask id="moonmask"><rect width="640" height="440" fill="#fff"/><circle cx="566" cy="62" r="20" fill="#000"/></mask>
-    <symbol id="si-emblem" viewBox="0 0 240 240">
-      <circle cx="120" cy="120" r="117" fill="none" stroke="#C2A14D" stroke-width="4"/>
-      <g clip-path="url(#siL)"><circle cx="120" cy="120" r="104" fill="#1E3A2B"/><circle cx="120" cy="120" r="40" fill="#E6C76B"/><path d="M99.3 70.1L91.7 51.6M81.8 81.8L60.6 60.6M70.1 99.3L51.6 91.7M66 120L36 120M70.1 140.7L51.6 148.3M81.8 158.2L60.6 179.4M99.3 169.9L91.7 188.4" stroke="#E6C76B" stroke-width="6" stroke-linecap="square"/></g>
-      <g clip-path="url(#siR)"><circle cx="120" cy="120" r="104" fill="#4A2A6E"/><circle cx="140" cy="120" r="50" fill="#C3BEF0" mask="url(#sim)"/><path d="M196 63Q196.882 71.118 205 72Q196.882 72.882 196 81Q195.118 72.882 187 72Q195.118 71.118 196 63Z" fill="#F4EEE3"/><path d="M184 170Q184.588 175.412 190 176Q184.588 176.588 184 182Q183.412 176.588 178 176Q183.412 175.412 184 170Z" fill="#F4EEE3"/><circle cx="208" cy="132" r="2.4" fill="#F4EEE3"/></g>
-      <rect x="119.25" y="14" width="1.5" height="212" fill="#C2A14D"/>
-    </symbol>
-  </defs>
-</svg>
-
 <header class="top">
   <div class="wrap">
-    <a class="brand wm" href="#top" aria-label="Solar Inference, back to top"><svg aria-hidden="true"><use href="#si-emblem"/></svg>Solar Inference</a>
-    <nav class="nav" aria-label="Sections">
-      <a href="#how">How it works</a>
-      <a href="#medicine">Medicine</a>
-      <a href="#home">For homes</a>
-      <a href="#towns">Towns</a>
-      <a href="#faq">Questions</a>
+    <a class="brand wm" href="./" aria-current="page"><img src="emblem.svg" alt="" width="30" height="30">Solar Inference</a>
+    <nav class="nav" aria-label="Pages">
+      <a href="node.html">The AI computer</a>
+      <a href="host.html">Hosting</a>
+      <a href="about.html">About</a>
     </nav>
-    <a class="btn btn-gold" href="#host">Host a node</a>
+    <a class="btn btn-gold" href="host.html">Become a host</a>
   </div>
 </header>
 
@@ -289,16 +40,17 @@ a{color:inherit}
 <section class="hero" aria-labelledby="hero-title">
   <div class="wrap">
     <div>
-      <p class="eyebrow">Solar Inference · Compute at home, for medicine</p>
+      <p class="eyebrow">Solar Inference · Compute at home</p>
       <h1 id="hero-title">Bringing AI computing <em>home.</em></h1>
-      <p class="lead">We put quiet, datacenter-class AI computers in the back yards of homes with power to spare, and together those homes become a distributed computer for discovering and developing new medicines (the home, for its part, gets a fixed monthly fee, heat in the winter and backup power when the grid goes down).</p>
+      <p class="lead">We are building a full data center server into a home, one AI computer with its own power, cooling, battery and fiber line, and once our own is running, we plan to place the next ones with a couple of other homes (the home, for its part, gets a fixed monthly rent, heat in the winter and backup power when the grid goes down).</p>
       <div class="ctas">
-        <a class="btn btn-gold" href="#medicine">See the work</a>
-        <a class="btn btn-line" href="#host">Host a node</a>
+        <a class="btn btn-gold" href="node.html">See the computer</a>
+        <a class="btn btn-line" href="host.html">Become a host</a>
       </div>
-      <p class="note">This is a concept we are still developing in New Jersey, and the figures on this page are our best estimates.</p>
+      <p class="note">This is a project we are still building in New Jersey, and the figures on this site are our best estimates.</p>
     </div>
-    <svg class="scene" viewBox="0 0 640 440" role="img" aria-label="A house with solar panels and, beside it in the yard, a compact computing enclosure. Heat flows from the enclosure into the house, backup power runs along a second line, and a fiber line leaves to the street. Above the house, stars trace the shape of a molecule, linked to the node.">
+    <svg class="scene" viewBox="0 0 640 440" role="img" aria-label="A house with solar panels and, beside it in the yard, a large computing enclosure. Heat flows from the enclosure into the house, backup power runs along a second line, and a fiber line leaves to the street.">
+      <defs><mask id="moonmask"><rect width="640" height="440" fill="#fff"/><circle cx="566" cy="62" r="20" fill="#000"/></mask></defs>
       <g opacity=".9">
         <circle cx="92" cy="72" r="24" fill="#E6C76B"/>
         <path d="M92 34v-12M92 122v-12M54 72h-12M142 72h-12M65 45l-8-8M127 107l-8-8M65 99l-8 8M127 37l-8 8" stroke="#E6C76B" stroke-width="3" stroke-linecap="round" opacity=".7"/>
@@ -306,14 +58,6 @@ a{color:inherit}
         <path d="M600 104q.6 5.4 6 6q-5.4.6-6 6q-.6-5.4-6-6q5.4-.6 6-6z" fill="#F4EEE3"/>
         <path d="M512 30q.4 3.6 4 4q-3.6.4-4 4q-.4-3.6-4-4q3.6-.4 4-4z" fill="#F4EEE3"/>
         <circle cx="490" cy="92" r="1.8" fill="#F4EEE3"/>
-      </g>
-      <g class="mol" aria-hidden="true">
-        <path d="M356 92C420 130 495 170 495 236" class="flow-fiber" stroke="#C3BEF0" stroke-width="2" fill="none" stroke-linecap="round" opacity=".7"/>
-        <path d="M300 58L313.9 66L313.9 82L300 90L286.1 82L286.1 66ZM313.9 66L327.7 58L341.6 66L341.6 82L327.7 90L313.9 82M286.1 66L272.2 58M327.7 58L327.7 42M341.6 82L355.5 90M300 90L300 106" stroke="#F4EEE3" stroke-opacity=".5" stroke-width="1.3" fill="none"/>
-        <circle cx="300" cy="74" r="8" fill="none" stroke="#F4EEE3" stroke-opacity=".3" stroke-width="1"/>
-        <circle class="tw" cx="300" cy="58" r="2.2" fill="#F4EEE3"/><circle cx="313.9" cy="66" r="2.2" fill="#F4EEE3"/><circle class="tw" cx="313.9" cy="82" r="2.2" fill="#F4EEE3" style="animation-delay:-1.1s"/><circle cx="300" cy="90" r="2.2" fill="#F4EEE3"/><circle cx="286.1" cy="82" r="2.2" fill="#F4EEE3"/><circle cx="286.1" cy="66" r="2.2" fill="#F4EEE3"/>
-        <circle cx="327.7" cy="58" r="2.2" fill="#F4EEE3"/><circle class="tw" cx="341.6" cy="66" r="2.2" fill="#F4EEE3" style="animation-delay:-2s"/><circle cx="341.6" cy="82" r="2.2" fill="#F4EEE3"/><circle cx="327.7" cy="90" r="2.2" fill="#F4EEE3"/>
-        <circle cx="272.2" cy="58" r="2.2" fill="#F4EEE3"/><circle class="tw" cx="327.7" cy="42" r="3.2" fill="#E6C76B" style="animation-delay:-.6s"/><circle cx="355.5" cy="90" r="3.2" fill="#E6C76B"/><circle cx="300" cy="106" r="3.2" fill="#E6C76B"/>
       </g>
       <rect x="0" y="372" width="640" height="68" fill="#13251B" opacity=".55"/>
       <path d="M16 372H624" stroke="#F4EEE3" stroke-opacity=".35" stroke-width="1.5"/>
@@ -345,259 +89,53 @@ a{color:inherit}
       <text x="360" y="362" text-anchor="middle">backup power</text>
       <text x="600" y="342" text-anchor="middle">fiber</text>
       <text class="lbl-strong" x="185" y="404" text-anchor="middle">The home</text>
-      <text class="lbl-strong" x="495" y="404" text-anchor="middle">The node</text>
+      <text class="lbl-strong" x="495" y="404" text-anchor="middle">The AI computer</text>
     </svg>
+  </div>
+</section>
+
+<section class="sec" id="node" aria-labelledby="node-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">The AI computer</p>
+      <h2 class="h2" id="node-title">A real data center server, at home.</h2>
+      <p class="lede">Not a box on the wall. Each one is a full AI computer, the same kind of machine the large AI data centers run, and it needs everything a data center would give it (its own electrical circuits, real cooling, a battery and its own fiber line), which makes it a much bigger project than a home computer and a far more capable machine.</p>
+    </div>
+    <div class="figs">
+      <div class="fig"><b class="num">8</b><p>top-end GPUs in one server, linked so that they work as one computer.</p><p class="src">Manufacturer specification</p></div>
+      <div class="fig"><b class="num">2+ TB</b><p>of GPU memory, enough to hold the largest open AI models in a single machine.</p><p class="src">Manufacturer specification</p></div>
+      <div class="fig"><b class="num">≈ 15 kW</b><p>at full power, about what a dozen average American homes draw at once.</p><p class="src">Manufacturer specification; U.S. EIA</p></div>
+      <div class="fig"><b class="num">≈ 51,000</b><p>BTU per hour of heat, about what a small furnace puts out.</p><p class="src">Our design estimate</p></div>
+    </div>
+    <p class="more"><a href="node.html">What goes into an AI computer</a></p>
+  </div>
+</section>
+
+<section class="sec" id="who" aria-labelledby="who-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Who it’s for</p>
+      <h2 class="h2" id="who-title">Three kinds of people we’d like to hear from.</h2>
+    </div>
+    <div class="doors">
+      <article><h3>Homeowners</h3><p>A home with a standard 200 A service, room in the yard and fiber at the street could host one of the next AI computers, for a fixed monthly rent, winter heat and backup power.</p><p><a href="host.html">Hosting an AI computer</a></p></article>
+      <article><h3>Compute customers</h3><p>Our machines rent by the hour through online marketplaces, and for longer or larger work we contract directly.</p><p><a href="about.html#compute">Buying compute</a></p></article>
+      <article><h3>Towns and utilities</h3><p>We would much rather plan each computer with the town and the utility than surprise them, so we talk to both before anything goes in.</p><p><a href="node.html#power">Power and the utility</a></p></article>
+    </div>
   </div>
 </section>
 
 <section class="sec" id="why" aria-labelledby="why-title">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Why now</p>
+      <p class="eyebrow">Why homes</p>
       <h2 class="h2" id="why-title">The short answer is electricity.</h2>
-      <p class="lede">Chips are hard enough to come by, but the real wait is for power, since a new datacenter can spend years in line for a grid connection while the average American home uses well under half of the electrical service it already has.</p>
+      <p class="lede">Chips are hard enough to come by, but the real wait is for power, since a new data center can spend years in line for a grid connection while the average American home uses well under half of the electrical service it already has.</p>
     </div>
-    <div class="figs">
+    <div class="figs three">
       <div class="fig"><b>Sold out</b><p>Amazon says AWS computing capacity is largely sold out through 2027, and a good part of 2028.</p><p class="src">Reuters, October 2026</p></div>
-      <div class="fig"><b class="num">$9.70</b><p>The median rental price for one NVIDIA B300 GPU-hour on October 25, up 12% in 90 days.</p><p class="src">GetDeploying, October 2026</p></div>
-      <div class="fig"><b>~4 years</b><p>The average U.S. wait for a new datacenter’s grid connection.</p><p class="src">JLL Global Data Center Outlook, 2026</p></div>
+      <div class="fig"><b>~4 years</b><p>The average U.S. wait for a new data center’s grid connection.</p><p class="src">JLL Global Data Center Outlook, 2026</p></div>
       <div class="fig"><b class="num">~40%</b><p>How much of its electrical capacity the average American home uses.</p><p class="src">Span, via Fortune, May 2026</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="medicine" aria-labelledby="med-title">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">The work</p>
-      <h2 class="h2" id="med-title">Together, the homes become a computer for medicine.</h2>
-      <p class="lede">One node is useful on its own, but the real promise is in many of them working together, and some of the most valuable work a distributed computer can do is in the discovery and development of new medicines, since so much of it splits naturally into thousands of independent pieces (which is exactly what a network of homes is good at).</p>
-    </div>
-    <figure class="transit" aria-label="One home with a node, then a row of homes whose nodes share one fiber line, and that line running to a glowing molecule.">
-      <svg class="scene" viewBox="0 0 1080 300" aria-hidden="true">
-        <defs>
-          <radialGradient id="mhalo"><stop offset="0" stop-color="#E6C76B" stop-opacity=".7"/><stop offset="1" stop-color="#E6C76B" stop-opacity="0"/></radialGradient>
-          <symbol id="hn" viewBox="0 0 120 80">
-            <rect x="8" y="40" width="58" height="38" fill="#183022" stroke="#F4EEE3" stroke-width="2"/>
-            <polygon points="2,42 37,14 72,42" fill="#2E2766" stroke="#F4EEE3" stroke-width="2" stroke-linejoin="round"/>
-            <polygon points="42,19 64,37 61,40 39,22" fill="#13251B" stroke="#C2A14D" stroke-width="1"/>
-            <rect x="17" y="50" width="14" height="12" fill="#E6C76B" opacity=".85"/>
-            <rect x="43" y="50" width="14" height="12" fill="#E6C76B" opacity=".85"/>
-            <rect x="31" y="62" width="10" height="16" fill="#2A1D15"/>
-            <path d="M84 64H66" stroke="#E6C76B" stroke-width="2" stroke-dasharray="3 3"/>
-            <rect x="86" y="44" width="26" height="6" fill="#3B2A1E" stroke="#8E6C4E" stroke-width="1"/>
-            <rect x="84" y="50" width="30" height="28" fill="#2A1D15" stroke="#C2A14D" stroke-width="1.6"/>
-            <path d="M89 60h14M89 66h14M89 72h14" stroke="#4A3527" stroke-width="2"/>
-            <circle cx="108" cy="56" r="1.8" fill="#E6C76B"/>
-          </symbol>
-        </defs>
-        <g fill="#F4EEE3" opacity=".8"><circle cx="120" cy="44" r="1.6"/><circle cx="330" cy="62" r="1.4"/><circle cx="560" cy="36" r="1.8"/><circle cx="760" cy="70" r="1.4"/><circle cx="690" cy="26" r="1.6"/><circle cx="1040" cy="40" r="1.6"/></g>
-        <path d="M20 286H1060" stroke="#F4EEE3" stroke-opacity=".3" stroke-width="1.5"/>
-        <circle class="glow" cx="960" cy="150" r="130" fill="url(#mhalo)"/>
-        <path class="flow-fiber" d="M238 218V116H871" stroke="#E6C76B" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <path class="flow-fiber" d="M439 257V116M534 257V116M629 257V116M724 257V116" stroke="#C3BEF0" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <use href="#hn" x="40" y="130" width="240" height="160"/>
-        <use href="#hn" x="360" y="222" width="96" height="64"/>
-        <use href="#hn" x="455" y="222" width="96" height="64"/>
-        <use href="#hn" x="550" y="222" width="96" height="64"/>
-        <use href="#hn" x="645" y="222" width="96" height="64"/>
-        <path d="M930 116L959.4 133L959.4 167L930 184L900.6 167L900.6 133ZM959.4 133L988.9 116L1018.3 133L1018.3 167L988.9 184L959.4 167M900.6 133L871 116M988.9 116L988.9 82M1018.3 133L1047.7 116M1018.3 167L1047.7 184M930 184L930 218L900.6 235" stroke="#F4EEE3" stroke-opacity=".6" stroke-width="2.4" fill="none" stroke-linejoin="round"/>
-        <circle cx="930" cy="150" r="19" fill="none" stroke="#F4EEE3" stroke-opacity=".35" stroke-width="1.6"/>
-        <g fill="#F4EEE3"><circle cx="930" cy="116" r="4.5"/><circle cx="959.4" cy="133" r="4.5"/><circle cx="959.4" cy="167" r="4.5"/><circle cx="930" cy="184" r="4.5"/><circle cx="900.6" cy="167" r="4.5"/><circle cx="900.6" cy="133" r="4.5"/><circle cx="1018.3" cy="133" r="4.5"/><circle cx="1018.3" cy="167" r="4.5"/><circle cx="988.9" cy="184" r="4.5"/><circle cx="1047.7" cy="116" r="4.5"/><circle cx="900.6" cy="235" r="4.5"/></g>
-        <circle class="tw" cx="871" cy="116" r="6.5" fill="#E6C76B"/><circle class="tw" cx="988.9" cy="82" r="6.5" fill="#E6C76B" style="animation-delay:-1.2s"/><circle class="tw" cx="988.9" cy="116" r="6.5" fill="#E6C76B" style="animation-delay:-2.1s"/><circle class="tw" cx="1047.7" cy="184" r="6.5" fill="#E6C76B" style="animation-delay:-.7s"/><circle cx="930" cy="218" r="6.5" fill="#E6C76B"/>
-      </svg>
-      <figcaption>
-        <ol>
-          <li><b>One home</b>One node in one back yard.</li>
-          <li><b>A network of homes</b>Many nodes, working as one computer.</li>
-          <li><b>Medicine</b>Discovery, development and clinical trials.</li>
-        </ol>
-      </figcaption>
-    </figure>
-    <div class="work">
-      <article>
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M13 6l7 4v8l-7 4-7-4v-8z"/><path d="M20 10l6-3M13 22v6M20 18l6 3"/><circle cx="26" cy="7" r="1.6"/><circle cx="26" cy="21" r="1.6"/></svg>
-        <h3>Discovery</h3>
-        <p>Predicting the shapes of proteins, screening billions of candidate molecules against a target and simulating how a drug actually binds, all of which breaks into small, independent jobs that can run in a thousand back yards at once.</p>
-      </article>
-      <article>
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 27h24M4 27V5"/><path d="M5 24c4 0 5-15 9-15s5 11 8 11 4-4 6-4"/></svg>
-        <h3>Development</h3>
-        <p>Modeling how a drug moves through the body and simulating a trial’s design before the first patient enrolls, which is work the FDA has begun to welcome (it now accepts computer models in place of some animal testing).</p>
-      </article>
-      <article>
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="6" y="6" width="20" height="23"/><path d="M12 4h8v4h-8z"/><path d="M10 15l2 2 4-4M10 23l2 2 4-4M19 15h4M19 23h4"/></svg>
-        <h3>Clinical trials</h3>
-        <p>Running private AI models on the paperwork and logistics that slow every trial (protocols, site selection, enrollment forecasts and reports), on hardware that can keep a sponsor’s data encrypted even while it computes.</p>
-      </article>
-    </div>
-    <div class="why-med">
-      <h3>Why medicine? Because that is where computing can do the most good.</h3>
-      <div class="figs">
-        <div class="fig"><b class="num">~90%</b><p>of drug candidates that enter human trials never reach approval.</p><p class="src">Sun et al., Acta Pharmaceutica Sinica B, 2022</p></div>
-        <div class="fig"><b class="num">10–15 years</b><p>from discovery to an approved medicine, on average.</p><p class="src">PhRMA</p></div>
-        <div class="fig"><b class="num">1 exaflop</b><p>first passed in 2020 by Folding@home, on volunteers’ home computers studying the coronavirus.</p><p class="src">Folding@home, via TechCrunch, March 2020</p></div>
-        <div class="fig"><b class="num">2024</b><p>The Nobel Prize in Chemistry went to computational protein design and structure prediction.</p><p class="src">nobelprize.org</p></div>
-      </div>
-    </div>
-    <div class="principles">
-      <div><h3>We start with public data.</h3><p>The first work on the network uses public information (chemical libraries, protein structures and simulations), and anything that touches patient data waits until we can meet the safeguards that trial sponsors and regulators require, which the newest GPUs make far more realistic, since they can keep data encrypted even while they compute on it.</p></div>
-      <div><h3>Our part is the computing.</h3><p>We have no plans to develop medicines of our own, since what we bring is the computing (and, over time, the AI tools that run on it) for the scientists and companies who do that hard work.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="how" aria-labelledby="how-title">
-  <div class="wrap product">
-    <div class="copy">
-      <p class="eyebrow">The node</p>
-      <h2 class="h2" id="how-title">About the size of an air conditioner (and a lot more interesting).</h2>
-      <p class="lede">Each node is a single datacenter-class server (eight NVIDIA B300 GPUs) sealed inside a cooled enclosure that sits in the yard much the way an AC condenser does. We own it, install it, insure it and run it remotely, and scientists and AI teams rent its computing, by the hour through online marketplaces or under longer contracts (more and more of it, we expect, for drug discovery and development).</p>
-      <p class="lede">It has its own meter and its own fiber line, so it never touches the home’s network or the household’s electric bill.</p>
-    </div>
-    <div class="plate" role="group" aria-labelledby="plate-title">
-      <div class="plate-head"><span class="wm" id="plate-title">Solar Inference home node</span><span>Design targets</span></div>
-      <dl>
-        <dt>Compute</dt><dd>8 × NVIDIA B300 GPUs in one server</dd>
-        <dt>Power</dt><dd>Up to ≈ 15 kW, throttled to what the house isn’t using</dd>
-        <dt>Heat output</dt><dd>≈ 51,000 BTU/h, about a small furnace</dd>
-        <dt>Cooling</dt><dd>Sealed liquid loop and a quiet outdoor cooler</dd>
-        <dt>Backup</dt><dd>A battery bank that carries the house in an outage</dd>
-        <dt>Network</dt><dd>Its own business fiber line</dd>
-        <dt>Noise</dt><dd>Under 50 dBA at the property line at night</dd>
-        <dt>Size</dt><dd>About an air-conditioning condenser</dd>
-        <dt>Operation</dt><dd>Remote monitoring, pricing and power control, 24/7</dd>
-      </dl>
-      <p class="plate-note">These are design targets for the first enclosure, which we are still building.</p>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="home" aria-labelledby="home-title">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">For the home</p>
-      <h2 class="h2" id="home-title">It starts to feel like a mini utility.</h2>
-      <p class="lede">We wanted the node to earn its keep for the house as well as for us, and between the monthly fee, the heat and the battery, the home ends up with a great deal more than a box in the yard.</p>
-    </div>
-    <div class="util">
-      <article>
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="7" width="24" height="20"/><path d="M4 13h24M10 4v6M22 4v6"/><path d="M11 19h4M11 23h8"/></svg>
-        <h3>A fixed fee, all year</h3>
-        <p>We pay the same fee every month for the use of the space, whether the computer is busy or sitting idle (the rental risk is ours to carry).</p>
-      </article>
-      <article>
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 27c-3-4 3-7 0-11s3-7 0-11M16 27c-3-4 3-7 0-11s3-7 0-11M23 27c-3-4 3-7 0-11s3-7 0-11"/></svg>
-        <h3>Warmth in winter</h3>
-        <p>The node gives off up to 15 kW of heat around the clock, roughly what a small furnace puts out, and piped into the house it can carry much of the winter heating.</p>
-      </article>
-      <article>
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="9" width="22" height="14"/><path d="M26 13h2v6h-2"/><path d="M16 11l-4 6h5l-3 5"/></svg>
-        <h3>Power when the grid is down</h3>
-        <p>A battery bank in the enclosure backs up the house, and when the grid goes down the computer shuts itself off first so that the house gets the power.</p>
-      </article>
-      <article>
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="16" cy="13" r="5"/><path d="M16 3v3M16 20v3M6 13h3M23 13h3M9 6l2 2M21 18l2 2M9 20l2-2M21 8l2-2"/><path d="M5 29l4-5h14l4 5z"/></svg>
-        <h3>A good partner for solar</h3>
-        <p>For homes with solar, the node runs on the panels while the sun is up, and it may qualify for clean-energy incentives that a household can’t claim on its own.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="money" aria-labelledby="money-title">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">How it pays</p>
-      <h2 class="h2" id="money-title">Following the money.</h2>
-    </div>
-    <div class="chain">
-      <div><h3>Renters</h3><p>AI teams and drug-discovery scientists rent computing by the hour or by contract.</p></div>
-      <div><h3>Marketplaces</h3><p>Match renters to machines and keep a share of each hour, while larger research customers contract with us directly.</p></div>
-      <div class="us"><h3>Solar Inference</h3><p>Owns and runs the node, and pays for the hardware, power, internet, insurance and upkeep.</p></div>
-      <div><h3>The host home</h3><p>A fixed monthly fee, winter heat and backup power.</p></div>
-    </div>
-    <div class="principles">
-      <div><h3>The host’s fee never moves.</h3><p>It doesn’t rise or fall with rentals, and that is deliberate. GPU rental prices can swing, and we think that risk is ours to carry, since the family only agreed to host a box in the yard.</p></div>
-      <div><h3>One large node per site.</h3><p>Every site comes with fixed costs (its own internet line, insurance, installation and a few visits a year), and the truth is that only a datacenter-class node earns enough to carry them, which is why we don’t put small machines in people’s yards.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="host" aria-labelledby="host-title">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">Hosting a node</p>
-      <h2 class="h2" id="host-title">Hosting asks very little of the home.</h2>
-    </div>
-    <div class="host">
-      <div class="home">
-        <h3>The home brings</h3>
-        <ul class="lozenge-list">
-          <li>A standard 200 A service that the node shares through smart power throttling</li>
-          <li>A level spot in the yard, back from the property line</li>
-          <li>Fiber internet available at the street</li>
-          <li>An owner who can sign a multi-year agreement</li>
-          <li>A yes from the home’s insurer, with our paperwork</li>
-        </ul>
-      </div>
-      <div class="us">
-        <h3>We handle</h3>
-        <ul class="lozenge-list">
-          <li>Zoning and permits, town by town</li>
-          <li>The utility: metering, transformers and peak-time limits</li>
-          <li>Design, installation and insurance</li>
-          <li>Monitoring and repairs, with a few visits a year</li>
-          <li>Removal within days if the home is sold</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="towns" aria-labelledby="towns-title">
-  <div class="wrap towns">
-    <div>
-      <div class="sec-head">
-        <p class="eyebrow">Permission</p>
-        <h2 class="h2" id="towns-title">We work it out town by town.</h2>
-        <p class="lede">Most town codes were written long before anyone imagined a computer in the back yard, so we take on the zoning question ourselves, one town at a time, much the way the early solar companies did.</p>
-      </div>
-      <ol class="steps">
-        <li><h3>Read the code</h3><p>Home-business rules, accessory equipment, and any data-center definition or ban.</p></li>
-        <li><h3>Ask for a ruling</h3><p>That the unit is accessory equipment, like a generator or an AC condenser.</p></li>
-        <li><h3>Meet the standards</h3><p>Setbacks, screening, permits, and the night noise limit at the property line.</p></li>
-        <li><h3>Write the rule</h3><p>Work with the town on a simple standard for home compute, as towns did for solar.</p></li>
-      </ol>
-      <div class="stat">
-        <div><b class="num">564</b><span>towns in New Jersey</span></div>
-        <div><b>~3 dozen</b><span>have banned data centers. Most have no rule either way.</span></div>
-      </div>
-    </div>
-    <aside class="utility" aria-labelledby="util-title">
-      <h3 id="util-title">Working with the utility</h3>
-      <p>A node is a large, steady load that the utility can see and control, and we would much rather plan each one with the utility than surprise them.</p>
-      <dl>
-        <div><dt>Service</dt><dd>Smart throttling fits the node within the home’s existing service, and we check room on the street’s transformer.</dd></div>
-        <div><dt>Metering</dt><dd>Its own meter, so the power it uses is billed to us and never to the household.</dd></div>
-        <div><dt>Peak hours</dt><dd>The node turns down when the grid is strained, and the battery can help carry the house.</dd></div>
-        <div><dt>Planning</dt><dd>We tell the utility where nodes go, so neighborhoods are ready before they arrive.</dd></div>
-      </dl>
-    </aside>
-  </div>
-</section>
-
-<section class="sec" id="field" aria-labelledby="field-title">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">The field</p>
-      <h2 class="h2" id="field-title">Some very large companies see the same opportunity.</h2>
-      <p class="lede">Without a doubt, the idea is in the air, and some of the companies betting that homes have power to spare are a great deal bigger than we are.</p>
-    </div>
-    <div class="others">
-      <article><h3>Span, with Nvidia and PulteGroup</h3><p class="where">California</p><p>Liquid-cooled compute nodes about the size of an air-conditioning unit, outside new homes. Prototypes running since May 2026.</p></article>
-      <article><h3>Heata</h3><p class="where">United Kingdom</p><p>Servers on home hot-water tanks. The computing heats the water, so the household gets free hot water. About 100 homes so far.</p></article>
-      <article class="us"><h3>Solar Inference</h3><p class="where">New Jersey</p><p>We already rent datacenter-grade GPUs online from a home server room, and the next steps are one large node of our own and then host homes in existing neighborhoods.</p></article>
     </div>
   </div>
 </section>
@@ -613,46 +151,17 @@ a{color:inherit}
         <h3 class="sub">So far</h3>
         <div class="built">
           <div><b>Machines renting online</b><p>GPU servers in a home server room, rented out to AI teams most of the time since the summer of 2026.</p></div>
-          <div><b>Software that runs itself</b><p>We wrote our own monitoring, pricing and power control, and it runs around the clock without anyone at the keyboard.</p></div>
-          <div><b>Lessons from home</b><p>Power, heat and noise all behave differently in a house than in a datacenter, and we would rather learn those lessons at home scale before building anything bigger.</p></div>
+          <div><b>Run with AI agents</b><p>AI agents help us build and run our monitoring, pricing and power control around the clock, and a person makes the calls that matter.</p></div>
+          <div><b>Lessons from home</b><p>Power, heat and noise all behave differently in a house than in a data center, and we would rather learn those lessons at home scale before building anything bigger.</p></div>
         </div>
       </div>
       <div>
         <h3 class="sub">Next</h3>
         <ol class="timeline">
-          <li><div><b>The first node</b><span>Built and run on our own site, to prove the template.</span></div></li>
-          <li><div><b>The first research work</b><span>Discovery and development jobs on our machines, starting with public data.</span></div></li>
-          <li><div><b>The enclosure</b><span>Cooling, sound treatment, battery and heat recovery in one box.</span></div></li>
-          <li><div><b>The utility</b><span>Smart throttling, metering and peak-time control for a home node.</span></div></li>
-          <li><div><b>The towns</b><span>Rank New Jersey’s towns and ask the first ones for a ruling.</span></div></li>
-          <li><div><b>First host homes</b><span>Once the first node has proven the design.</span></div></li>
+          <li><div><b>Our own AI computer</b><span>Built and run at our own home first, so that every lesson about power, heat and noise is ours to learn before it is anyone else’s.</span></div></li>
+          <li><div><b>The enclosure</b><span>Cooling, sound treatment, battery and heat recovery, built around the computer for a host home.</span></div></li>
+          <li><div><b>A couple of host homes</b><span>In New Jersey, a small number to start, once our own AI computer has proven the design.</span></div></li>
         </ol>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="faq" aria-labelledby="faq-title">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">Questions</p>
-      <h2 class="h2" id="faq-title">Fair questions from a homeowner.</h2>
-    </div>
-    <div class="faq">
-      <div>
-        <details><summary>Will the neighbors hear it?</summary><p>We are designing it to stay under New Jersey’s nighttime limit at the property line (50 decibels, which is about the sound of a quiet office), and noise is the single biggest driver of the enclosure design.</p></details>
-        <details><summary>What if the power goes out?</summary><p>The battery backs up the house, and the computer shuts itself down first so that everything in the battery goes to the house.</p></details>
-        <details><summary>Is it safe?</summary><p>It is listed equipment on its own circuits, watched around the clock for heat and smoke and able to be shut off remotely, and we insure it, with a liability policy that covers the home.</p></details>
-        <details><summary>Can it see our network?</summary><p>No. It has its own fiber line and never joins the home network, and we never look at what our customers run on it.</p></details>
-        <details><summary>What will it compute?</summary><p>Mostly AI work for research teams, and more and more of it in drug discovery and development (protein structures, molecular screening, simulations and the models behind clinical trials), and whatever it runs, it never touches your home or your network.</p></details>
-      </div>
-      <div>
-        <details><summary>Do we need a bigger electrical service?</summary><p>Usually not. Smart power throttling watches the home’s total draw and turns the node down first, so the house always gets what it needs and the service stays within its rating (the battery covers short peaks).</p></details>
-        <details><summary>Does it raise our electric bill?</summary><p>No. The node’s power is either on its own meter or included in our fee, and it never shows up on the household’s bill.</p></details>
-        <details><summary>Do we have to do anything?</summary><p>Not really. We monitor and repair it remotely with a few scheduled visits a year, and all we ask is that you keep the circuit on and let us in when we give notice.</p></details>
-        <details><summary>Will patient data be in our yard?</summary><p>Not for now. We start with work that uses public data, and we would only take on patient information encrypted from end to end, under the safeguards that trial sponsors and regulators require.</p></details>
-        <details><summary>What if we sell the house?</summary><p>The agreement ends, and we remove the box within days.</p></details>
-        <details><summary>Is our town allowed?</summary><p>That is the first thing we check. If your town’s code is silent we ask for a ruling, and if your town has banned data centers we simply won’t place a node there.</p></details>
       </div>
     </div>
   </div>
@@ -662,7 +171,7 @@ a{color:inherit}
   <div class="wrap">
     <span class="orn" aria-hidden="true"></span>
     <h2 id="close-title">We would love to hear from you.</h2>
-    <p>More than anything, we hope that ordinary homes get to share in the AI buildout, and in the medicines it can help bring about, so whether you are thinking about hosting a node, bringing this to your town or running your research on the network, please write to us.</p>
+    <p>More than anything, we hope that ordinary homes get to share in the AI buildout, so whether you are thinking about hosting an AI computer or looking for serious computing for your own work, please write to us.</p>
     <div class="contact" id="contact">
       <code id="contact-email">admin@solarinference.com</code>
       <button type="button" id="copy-email">Copy address</button>
@@ -675,25 +184,18 @@ a{color:inherit}
 <footer class="foot">
   <div class="wrap">
     <div>
-      <a class="brand wm" href="#top"><svg aria-hidden="true"><use href="#si-emblem"/></svg>Solar Inference</a>
+      <a class="brand wm" href="./"><img src="emblem.svg" alt="" width="30" height="30">Solar Inference</a>
       <p style="margin-top:14px">Solar Inference LLC · New Jersey</p>
-      <p>This is a concept in development, and the figures here are estimates. Nothing on this page is an offer to invest, and none of it is tax advice.</p>
+      <p>This is a project in development, and the figures on this site are estimates. A host’s rent is a fixed payment for the use of the space, and it doesn’t depend on how the computer performs or on how our business does. Nothing on this site is an offer to invest, and none of it is tax advice.</p>
       <p>© 2026 Solar Inference LLC</p>
     </div>
     <div class="srcs">
       <b>Sources</b>
+      <span>Server, GPU memory and power: the manufacturer’s published specifications.</span>
+      <span>Household electricity use: U.S. Energy Information Administration, average residential consumption.</span>
       <span>AWS capacity: Reuters, October 23, 2026, reporting Amazon CEO Andy Jassy.</span>
-      <span>B300 rental price: GetDeploying median on-demand price, October 25, 2026.</span>
       <span>Grid wait: JLL 2026 Global Data Center Outlook, as reported.</span>
-      <span>Home capacity and Span nodes: Network World, May 13, and Fortune, May 15, 2026; Span’s figure.</span>
-      <span>Heata: MIT Technology Review, 2023, and later coverage.</span>
-      <span>Data-center bans: NJ Monitor, August 20, 2026.</span>
-      <span>Clinical failure rate: Sun et al., “Why 90% of clinical drug development fails,” Acta Pharmaceutica Sinica B, July 2022.</span>
-      <span>Development time: PhRMA industry profiles.</span>
-      <span>Folding@home: the project’s March 2020 report, via TechCrunch, March 26, 2020.</span>
-      <span>Nobel Prize in Chemistry 2024 (Baker; Hassabis and Jumper): nobelprize.org.</span>
-      <span>Computer models in place of animal testing: FDA Modernization Act 2.0 (2022) and the FDA roadmap of April 10, 2025.</span>
-      <span>Encrypted computing on eight-GPU Blackwell servers: NVIDIA developer blog.</span>
+      <span>Home capacity: Fortune, May 15, 2026; Span’s figure.</span>
     </div>
   </div>
 </footer>
